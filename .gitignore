@@ -1,0 +1,47 @@
+# logs
+logs
+*.log
+
+# npm & yarn
+.npm
+npm-debug.log*
+package-lock.json
+
+.yarn-integrity
+yarn-debug.log*
+yarn-error.log*
+
+node_modules/
+
+# production
+/build
+
+# Storybook
+.out
+.storybook-out
+storybook-static
+
+# Bundles
+_build/
+dist/
+.cache
+.parcel-cache
+
+# Temporary folders
+tmp/
+temp/
+
+# IDE
+.idea
+.vscode
+.vscode-test
+.devcontainer
+
+# Misc
+.cache/
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.eslintcache

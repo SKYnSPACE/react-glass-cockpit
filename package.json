@@ -1,0 +1,43 @@
+{
+  "name": "react-glass-cockpit",
+  "version": "0.1.0",
+  "description": "Digital flight instrument displays for React JS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKYnSPACE/react-glass-cockpit.git"
+  },
+  "keywords": [
+    "PFD"
+  ],
+  "author": "ASCL",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/SKYnSPACE/react-glass-cockpit/issues"
+  },
+  "homepage": "https://github.com/SKYnSPACE/react-glass-cockpit#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@storybook/addon-essentials": "^7.0.22",
+    "@storybook/addon-interactions": "^7.0.22",
+    "@storybook/addon-links": "^7.0.22",
+    "@storybook/blocks": "^7.0.22",
+    "@storybook/react": "^7.0.22",
+    "@storybook/react-webpack5": "^7.0.22",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.22"
+  },
+  "peerDevDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
