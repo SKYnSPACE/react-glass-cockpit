@@ -1,24 +1,23 @@
 import React from 'react';
 
-const altMin = -1200;
-const altMax = 4400;
+const altFeetMin = -1200;
+const altFeetMax = 4400;
 const pixelRange = 5040;
-const visiblePixelRange = 720;
+const visiblePixelRange = 720; // 90px / 100ft
 const halfVisiblePixelRange = visiblePixelRange / 2;
 
-const altToPixel = (alt) => {
-  return pixelRange * (1 - (alt - altMin) / (altMax - altMin));
+const altFeetToPixel = (altFeet) => {
+  return pixelRange * (1 - (altFeet - altFeetMin) / (altFeetMax - altFeetMin));
 }
 
 export const AltitudeTape = ({ style, ...props }) => {
   const {scale = 1.0, altitude = 0.0} = props
-  console.log(scale, altToPixel(altitude))
   return (
     <div style={{ ...style}}>
       <svg style={{
         position:'absolute',
         left:0,
-        top:`${-scale*(altToPixel(altitude)-halfVisiblePixelRange)}px`
+        top:`${-scale*(altFeetToPixel(altitude)-halfVisiblePixelRange)}px`
       }}
       viewBox="0 0 120 5040" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_16_164)">
