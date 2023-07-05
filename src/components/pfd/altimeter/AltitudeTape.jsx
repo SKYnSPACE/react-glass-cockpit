@@ -13,7 +13,7 @@ const altFeetToPixel = (altFeet) => {
 export const AltitudeTape = ({ style, ...props }) => {
   const {scale = 1.0, altitude = 0.0} = props
   return (
-    <div style={{ ...style}}>
+    <div style={{ ...style, backgroundColor:'#777777'}}>
       <svg style={{
         position:'absolute',
         left:0,

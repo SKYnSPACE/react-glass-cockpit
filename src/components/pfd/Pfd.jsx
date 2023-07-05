@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
-// import { Sky, Ground } from './attitude-indicator';
+
+import { FlightModeDisplay } from './flightmode-annunciator';
+import { AirspeedDisplay, AirspeedTape } from './airspeed-indicator';
 import { AttitudeScale, Horizon } from './attitude-indicator';
 import { AltitudeTape, AltitudeDisplay } from './altimeter';
 import { Glass } from './Glass';
@@ -68,7 +70,24 @@ export const Pfd = ({ className, children, ...props }) => {
 
       {children}
 
+      <FlightModeDisplay style={{
+        position: 'absolute',
+        left: '16.5%',
+        top: '0%',
+        width: '57%',
+        height: '8%',
+        backgroundColor: '#777777',
+      }} />
 
+      <AirspeedTape style={{
+        position: 'absolute',
+        left: '2.5%',
+        top: '12.5%',
+        width: '12%',
+        height: '72%',
+      }}
+        scale={scale}
+        airspeed={airspeed} />
 
       <AltitudeTape style={{
         position: 'absolute',
@@ -109,14 +128,22 @@ export const Pfd = ({ className, children, ...props }) => {
 
 
 
-
+      <AirspeedDisplay style={{
+        position: 'absolute',
+        left: '1.5%',
+        top: '44%',
+        width: '11%',
+        height: '9%',
+      }}
+        scale={scale}
+        airspeed={airspeed} />
 
       <AltitudeDisplay style={{
         position: 'absolute',
         left: '80%',
-        top: '40%',
+        top: '41.7%',
         width: '14%',
-        height: '13%',
+        height: '10.4%',
       }}
         scale={scale}
         altitude={altitude} />

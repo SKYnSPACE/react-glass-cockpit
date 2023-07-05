@@ -25,7 +25,6 @@ const translateHorizonToPixel = (pixel) => {
 
 export const AttitudeScale = ({ style, ...props }) => {
   const { scale = 1.0, roll = 0.0, pitch = 0.0 } = props;
-  console.log(pitchDegreeToOriginalPixel(pitch), translateHorizonToPixel(pitchDegreeToOriginalPixel(pitch)))
   return (
     <div style={{
       ...style,
