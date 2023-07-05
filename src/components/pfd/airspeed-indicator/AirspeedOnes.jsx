@@ -1,3 +1,5 @@
+import React from 'react';
+
 const displayHeightPixel = 90
 const displayHeightPixelHalf = 45;
 

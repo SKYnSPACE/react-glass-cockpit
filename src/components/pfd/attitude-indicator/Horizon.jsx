@@ -1,3 +1,4 @@
+import React from 'react';
 
 const pitchDeegreeMin = -34.0;
 const pitchDeegreeMax = 34.0;

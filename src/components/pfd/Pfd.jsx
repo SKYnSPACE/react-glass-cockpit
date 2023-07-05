@@ -1,10 +1,9 @@
-import React, { useCallback, useEffect } from 'react';
-
+import React from 'react';
 import { FlightModeDisplay } from './flightmode-annunciator';
 import { AirspeedDisplay, AirspeedTape } from './airspeed-indicator';
 import { AttitudeScale, Horizon } from './attitude-indicator';
 import { AltitudeTape, AltitudeDisplay } from './altimeter';
-import { Glass } from './Glass';
+import { Glass } from './Glass.jsx';
 import { VerticalSpeedTape } from './vspeed-indicator';
 import { Compass } from './turn-indicator';
 
@@ -12,7 +11,17 @@ import { Compass } from './turn-indicator';
 
 export const Pfd = ({ className, children, ...props }) => {
 
-  const { size = 400, states } = props;
+  const { 
+    size = 400, 
+    states = { 
+      roll: 0, 
+      pitch: 0, 
+      heading: 0,
+      airspeed: 0, 
+      altitude: 0, 
+      verticalSpeed: 0 
+    }
+  } = props;
   const scale = (size / 1000);
   const { roll = 0, pitch = 0, heading = 0,
     airspeed = 0, altitude = 0,

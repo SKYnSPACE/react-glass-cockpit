@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const VerticalSpeedTape = ({ style, ...props }) => {
   const { scale = 1.0, verticalSpeed = 0.0 } = props
   return (
