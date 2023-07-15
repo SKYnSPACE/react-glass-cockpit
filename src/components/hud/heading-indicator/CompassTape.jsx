@@ -14,8 +14,20 @@ export const CompassTape = ({ style, ...props }) => {
   const { scale = 1.0, heading = 0.0 } = props
 
   return (
-    <div style={{ ...style, backgroundColor:'#777777',
+    <div style={{ ...style,
+      borderRadius: '1% / 18%',
     overflow: 'hidden', }}>
+
+      <div
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          backgroundColor: '#000000',
+          opacity: '0.25',
+        }}>
+      </div>
+
       <svg style={{
         position: 'absolute',
         left: `-${scale * normalizeHeading(heading) * stridePixel}`,
@@ -145,7 +157,7 @@ export const CompassTape = ({ style, ...props }) => {
       </clipPath>
       </defs>
       </svg>
-      
+
 
     </div>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 
 import { CompassTape, HeadingDisplayU, HeadingDisplayL } from './heading-indicator';
 
-export const Hud = ({ className, children, ...props }) => {
+export const HudCompass = ({ className, children, ...props }) => {
   const {
-    size = 400,
+    size = 900,
     states = {
       heading: 0.0,
       headingRef: 0.0,
@@ -17,13 +17,12 @@ export const Hud = ({ className, children, ...props }) => {
     // 900 * 50 (height = 18% of width)
     <div className=""
       style={{
-        height: size ?? '400px',
-        width: size ?? '400px',
+        width: size ?? '900px',
+        height: size*130/900 ?? '130px',
         // margin: '5px',
-        position: 'fixed',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        position: 'relative',
+        display: 'inline-block',
+        overflow: 'hidden',
         // backgroundColor: '#3498db'
       }}>
 
@@ -31,8 +30,8 @@ export const Hud = ({ className, children, ...props }) => {
         style={{
           position: 'absolute',
           width: '100%',
-          height: '5.556%',
-          top: '4.5%',
+          height: `${100*50/130}%`,
+          top: `${100*40/130}%`,
         }}
         scale={size/900}
         heading={heading}
@@ -51,7 +50,7 @@ export const Hud = ({ className, children, ...props }) => {
         style={{
           position: 'absolute',
           width: '7.778%',
-          top: '10%',
+          top: `${100*90/130}%`,
         }}
         scale={size / 900}
         heading={heading}

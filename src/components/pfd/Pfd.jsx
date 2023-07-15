@@ -1,7 +1,7 @@
 import React from 'react';
 import { FlightModeDisplay } from './flightmode-annunciator';
 import { AirspeedDisplay, AirspeedTape } from './airspeed-indicator';
-import { AttitudeScale, Horizon } from './attitude-indicator';
+import { AttitudeScale, Horizon, RollIndicator } from './attitude-indicator';
 import { AltitudeTape, AltitudeDisplay } from './altimeter';
 import { Glass } from './Glass.jsx';
 import { VerticalSpeedTape } from './vspeed-indicator';
@@ -76,6 +76,16 @@ export const Pfd = ({ className, children, ...props }) => {
         roll={roll} pitch={pitch}
       />
 
+      <RollIndicator style={{
+        position: 'absolute',
+        left: '20%',
+        top: '23.5%',
+        width: '50%',
+        height: '50%',
+      }}
+        scale={scale}
+        roll={roll}
+      />
 
       {children}
 

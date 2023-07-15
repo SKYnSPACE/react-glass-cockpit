@@ -2,3 +2,4 @@
 // export * from './Ground';
 export * from './Horizon';
 export * from './AttitudeScale';
+export * from './RollIndicator';

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Hud } from '../components/hud';
+import { Hud, HudCompass } from '../components/hud';
 
 export default {
   title: 'HUD',
-  component: Hud,
+  component: HudCompass,
 };
 
 // export const Default = () => {
@@ -15,11 +15,12 @@ export default {
 
 export const Default = {
   render: (args) => (
-  <Hud {...args}/>
+  <HudCompass {...args}/>
   ),
   args:{
-    size: 900,
+    size: 400,
     states:{heading: 0,
+      headingRef: 0,
     },
   }
 };
